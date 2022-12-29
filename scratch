@@ -1,0 +1,62 @@
+/* 
+.banner{
+    position: relative;
+    background-color: black;
+}
+
+img{
+    width: 50%;
+    margin-left: 291px;
+}
+
+.overlay {
+    position: relative;
+    bottom: 300px;
+}
+
+.box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 21px;
+    top: 60px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box h1{
+    color: white;
+}
+
+@media (min-width: 0px) { 
+    .banner{
+        background-color: black;
+    }
+}
+
+@media (min-width: 768px) { 
+    .banner{
+        background-color: aqua;
+    }
+ }
+
+@media (min-width: 992px) { 
+    .banner{
+        background-color: chartreuse;
+    }
+ }
+
+@media (min-width: 1200px) { 
+    .banner{
+        background-color: salmon;
+    }
+}
+
+@media (min-width: 1400px) { 
+    .banner{
+        background-color: turquoise;
+    }
+ } */
