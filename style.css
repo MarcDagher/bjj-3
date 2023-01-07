@@ -30,6 +30,18 @@ form{
     display: none;
 }
 
+.user_opponents h1 {
+    color: black;
+}
+
+.user-details {
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
 @media (min-width: 576px) { 
     .banner{
         background-color:blue;

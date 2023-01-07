@@ -49,19 +49,19 @@ $brackets = array(
             "name" => 'Marc.J',
             "age" => '2002-3-14',
             "category" => '66',
-            "mail" => 'marc.J@gmail.com'
+            "email" => 'marc.J@gmail.com'
         ),
         array(
             "name" => 'Joe.B',
             "age" => '2001-10-12',
             "category" => '66',
-            "mail" => 'Joe.B@gmail.com'
+            "email" => 'Joe.B@gmail.com'
         ),
         array(
             "name" => 'Fred.A',
             "age" =>  '1999-12-20',
             "category" => '66',
-            "mail" => 'Fred.A@gmail.com'
+            "email" => 'Fred.A@gmail.com'
         )
     ),
 
@@ -70,19 +70,19 @@ $brackets = array(
             "name" => 'Ali',
             "age" =>  '2000-2-21',
             "category" => '77',
-            "mail" => 'ali@gmail.com'
+            "email" => 'ali@gmail.com'
         ),
         array(
             "name" => 'Firas',
             "age" =>  '1999-12-20',
             "category" => '77',
-            "mail" => 'firas@gmail.com'
+            "email" => 'firas@gmail.com'
         ),
         array(
             "name" => 'Malek',
             "age" =>  '1997-12-20',
             "category" => '77',
-            "mail" => 'malek@gmail.com'
+            "email" => 'malek@gmail.com'
         )
     ),
 
@@ -91,19 +91,19 @@ $brackets = array(
             "name" => 'Mohammad',
             "age" =>  '1999-3-30',
             "category" => '88',
-            "mail" => 'mohammad@gmail.com'
+            "email" => 'mohammad@gmail.com'
         ),
         array(
             "name" => 'Riyad',
             "age" =>  '2001-1-12',
             "category" => '88',
-            "mail" => 'riyad@gmail.com'
+            "email" => 'riyad@gmail.com'
         ),
         array(
             "name" => 'Hussein',
             "age" =>  '1994-3-14',
             "category" => '88',
-            "mail" => 'hussein@gmail.com'
+            "email" => 'hussein@gmail.com'
         )
     )
 );
@@ -130,20 +130,32 @@ print_r($brackets);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./functions.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
     <div class="user_opponents">
-        <h1>Click on the button to check your bracket's info.</h1>
-        <button>Opponents</button>
-        <div class="btn-click">
-            <a href="#">hello</a>
-            <a href="#">hello</a>
-            <a href="#">hello</a>
-            <a href="#">hello</a>
+        <h1>All users in the 77 bracket are listed below:</h1>
+
+        <div class="user-details">
+            <p>Name: Joe</p>
+            <p>Age: 12-12-2020</p>
+            <p>Email: joegabdelsater@gmail.com</p>
         </div>
+
+        <div class="user-details">
+            <p>Name: Joe</p>
+            <p>Age: 12-12-2020</p>
+            <p>Email: joegabdelsater@gmail.com</p>
+        </div>
+
+
+        <div class="user-details">
+            <p>Name: Joe</p>
+            <p>Age: 12-12-2020</p>
+            <p>Email: joegabdelsater@gmail.com</p>
+        </div>
+
 
     </div>
 
