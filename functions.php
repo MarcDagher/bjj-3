@@ -24,144 +24,128 @@ if (!isset($user_category) || empty($user_category)){
 if (!isset($user_mail) || empty($user_mail)){
     echo 'Please enter your email <br/>';
     die;}    
-else{
-    echo 'Good Luck';   
-    }
-
 
 
 $user_info = array(
-    "name" => $user_name,
-    "age" => $user_age,
-    "category" => $user_category,
-    "mail" => $user_mail
-);
+    "new user" => array(
+            "name" => $user_name,
+            "age" => $user_age,
+            "category" => $user_category,
+            "mail" => $user_mail
+));
 
 // Creating Opponent Info:
 // ~~~~~~~~~~~~~~~~~~~~~~~
    
 $brackets = array(    
     
-    $bracket_66 = array( 
-        array(
-            "name"=> 'Marc.J',
-            "age" => '2002-3-14',
-            "category" => '66',
-            "mail" => 'marc.J@gmail.com'),
-        array(
-            "name"=> 'Joe.B',
-            "age" => '2001-10-12',
-            "category" => '66',
-            "mail" => 'Joe.B@gmail.com'),
-        array(
-        "name" =>'Fred.A',
-        "age" =>  '1999-12-20',
-        "category" => '66',
-        "mail" => 'Fred.A@gmail.com')
-        ), 
+    "bracket_66" => array( 
 
-    $bracket_77 = array(
-        array(
-            "name" =>'Ali',
-            "age" =>  '2000-2-21',
-            "category" => '77',
-            "mail" =>'ali@gmail.com'
-        ),
-        array(
-            "name" =>'Firas',
-            "age" =>  '1999-12-20',
-            "category" => '77',
-            "mail" =>'firas@gmail.com'
-        ),
-        array(
-            "name" =>'Malek',
-            "age" =>  '1997-12-20',
-            "category" => '77',
-            "mail" =>'malek@gmail.com'
-            )
-        ),
+        "MarcJ" => array(
+                "name"=> 'Marc.J',
+                "age" => '2002-3-14',
+                "category" => '66',
+                "mail" => 'marc.J@gmail.com'),
+        "Joe.B" => array( 
+                "name"=> 'Joe.B',
+                "age" => '2001-10-12',
+                "category" => '66',
+                "mail" => 'Joe.B@gmail.com'),
+        "Fred.A" => array(
+                "name" =>'Fred.A',
+                "age" =>  '1999-12-20',
+                "category" => '66',
+                "mail" => 'Fred.A@gmail.com')
+            ), 
 
-    $bracket_88=array(
-        array(
-            "name" =>'Mohammad',
-            "age" =>  '1999-3-30',
-            "category" => '88',
-            "mail" =>'mohammad@gmail.com'
-        ),
-        array(
-            "name" =>'Riyad',
-            "age" =>  '2001-1-12',
-            "category" => '88',
-            "mail" =>'riyad@gmail.com'
-        ),
-        array(
-            "name" =>'Hussein',
-            "age" =>  '1994-3-14',
-            "category" => '88',
-            "mail" =>'hussein@gmail.com'
+    "bracket_77" => array(
+
+        'Ali' => array(
+                "name" =>'Ali',
+                "age" =>  '2000-2-21',
+                "category" => '77',
+                "mail" =>'ali@gmail.com'),
+        'Firas' => array(
+                "name" =>'Firas',
+                "age" =>  '1999-12-20',
+                "category" => '77',
+                "mail" =>'firas@gmail.com'),
+        'Malek' => array(
+                "name" =>'Malek',
+                "age" =>  '1997-12-20',
+                "category" => '77',
+                "mail" =>'malek@gmail.com')
+            ),
+
+    "bracket_88" => array(
+
+        "Mohammad" => array(
+                "name" =>'Mohammad',
+                "age" =>  '1999-3-30',
+                "category" => '88',
+                "mail" =>'mohammad@gmail.com'),
+        "Riyad" => array(
+                "name" =>'Riyad',
+                "age" =>  '2001-1-12',
+                "category" => '88',
+                "mail" =>'riyad@gmail.com'),
+        "Hussein" => array(
+                "name" =>'Hussein',
+                "age" =>  '1994-3-14',
+                "category" => '88',
+                "mail" =>'hussein@gmail.com')
         )
-    )
-        );
+    );
 
 // Transferring User Info to Weight Bracket:
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// When i use this i get a blank screen 
-// ???????????????????????????????????????
-// if ($user_info["category"] == "66") { 
-//     array_push($bracket_66, $user_info);
-// } else {
-//     die;
-// }
-
-// if ($user_info["category"] == "77") { 
-//     array_push($bracket_77, $user_info);
-// } else {
-//     die;
-// }
-
-// if ($user_info["category"] == "88") { 
-//     array_push($bracket_88, $user_info);
-// } else {
-//     die;
-// }
-
-// but when i use this it works
-if ($user_info["category"] == "66") {
-    array_push($bracket_66, $user_info);
-} elseif ($user_info["category"] == "77") {
-        array_push($bracket_77, $user_info);
+if ($user_info['new user']["category"] == "66") {
+    array_push($brackets["bracket_66"], $user_info);
+} elseif ($user_info['new user']["category"] == "77") {
+        array_push($brackets['bracket_77'], $user_info);
     } else {
-        array_push($bracket_88, $user_info);
+        array_push($brackets['bracket_88'], $user_info);
     }
 
-var_dump($user_category);
-var_dump($user_info["category"]);
+// echo "<pre>"; 
+// var_dump($user_category);
+// var_dump($user_info["category"]);
 
-echo "<pre>";
-print_r($bracket_66);
-echo "<pre>";
-print_r($bracket_77);
-echo "<pre>";
-print_r($bracket_88);
+// echo "<pre>";
+// print_r($brackets['bracket_66']);
+// echo "<pre>";
+// print_r($brackets['bracket_77']);
+// echo "<pre>";
+// print_r($brackets['bracket_88']);
 
+// $fighter1 = $_POST['fighter1'];
 
-
+// based on the users Bracket
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./functions.css">
+</head>
+<body>
 
-<!-- when i used: why is there an extra key [88] => 66??
+<div class="user_opponents">
+    <h1>Click on the button to check your bracket's info.</h1>
+    <button>Opponents</button>
+    <div class="btn-click">
+        <a href="#">hello</a>
+        <a href="#">hello</a>
+        <a href="#">hello</a>
+        <a href="#">hello</a>
+    </div>
 
-if ($user_info[$user_category] = "66") {
-    array_push($bracket_66, $user_info);
-    }
+</div>
 
-i'm getting: 
-[3] => Array
-        (
-            [name] => marc dagher
-            [age] => 2022-12-08
-            [category] => 88
-            [mail] => marcdagher47@gmail.com
-            [88] => 66
-        ) -->
+</body>
+</html>

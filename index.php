@@ -17,7 +17,7 @@
                 <div class="banner">
                     <div class="row"> 
                             <div class="logo col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <img src="./beirut.jpg" alt="Wallpaper">
+                                <img src="images/beirut.jpg" alt="Wallpaper">
                             </div>
                             
                             <div class="overlay col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -39,8 +39,7 @@
                             </div>
                         </div>
                     </div>
-                <img src="/euro_logo.jpg" alt="logo" id="tlogo">
+                <img src="/images/euro_logo.jpg" alt="logo" id="tlogo">
     </div>
-    
 </body>
 </html>
