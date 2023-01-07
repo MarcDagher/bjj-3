@@ -44,7 +44,7 @@ if (!isset($user_info['email']) || empty($user_info['email'])) {
 // ~~~~~~~~~~~~~~~~~~~~~~~
 
 $brackets = array(
-    "bracket_66" => array(
+    "66" => array(
         array(
             "name" => 'Marc.J',
             "age" => '2002-3-14',
@@ -65,7 +65,7 @@ $brackets = array(
         )
     ),
 
-    "bracket_77" => array(
+    "77" => array(
         array(
             "name" => 'Ali',
             "age" =>  '2000-2-21',
@@ -86,7 +86,7 @@ $brackets = array(
         )
     ),
 
-    "bracket_88" => array(
+    "88" => array(
         array(
             "name" => 'Mohammad',
             "age" =>  '1999-3-30',
@@ -111,15 +111,19 @@ $brackets = array(
 // Transferring User Info to Weight Bracket:
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // WTF?? 
-if ($user_info["category"] == "66") {
-    array_push($brackets["bracket_66"], $user_info);
-} elseif ($user_info["category"] == "77") {
-    array_push($brackets['bracket_77'], $user_info);
+
+// $user_info['category'] // 77
+$existing_brackets = array_keys($brackets); // [66, 77, 88]
+
+if (in_array($user_info['category'], $existing_brackets)) {
+    array_push($brackets[$user_info['category']], $user_info);
 } else {
-    array_push($brackets['bracket_88'], $user_info);
+    echo "Invalid user category";
+    die;
 }
 
-print_r($brackets);
+$opponents = $brackets[$user_info['category']];
+$weight_class = $user_info['category'];
 ?>
 
 <!DOCTYPE html>
@@ -135,27 +139,15 @@ print_r($brackets);
 
 <body>
     <div class="user_opponents">
-        <h1>All users in the 77 bracket are listed below:</h1>
-
-        <div class="user-details">
-            <p>Name: Joe</p>
-            <p>Age: 12-12-2020</p>
-            <p>Email: joegabdelsater@gmail.com</p>
-        </div>
-
-        <div class="user-details">
-            <p>Name: Joe</p>
-            <p>Age: 12-12-2020</p>
-            <p>Email: joegabdelsater@gmail.com</p>
-        </div>
-
-
-        <div class="user-details">
-            <p>Name: Joe</p>
-            <p>Age: 12-12-2020</p>
-            <p>Email: joegabdelsater@gmail.com</p>
-        </div>
-
+        <h1>All users in the <?php echo $weight_class; ?> bracket are listed below:</h1>
+        <!-- loops -->
+        <?php foreach ($opponents as $opponent) { ?>
+            <div class="user-details">
+                <p>Name: <?php echo $opponent['name']; ?></p>
+                <p>Age: <?php echo $opponent['age']; ?></p>
+                <p>Email: <?php echo $opponent['email']; ?></p>
+            </div>
+        <?php } ?>
 
     </div>
 
